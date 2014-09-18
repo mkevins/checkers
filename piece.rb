@@ -35,7 +35,7 @@ class Piece
     case self.color
     when :red
       print "*".red.on_white
-    when :white
+    when :black
       print "*".black.on_white
     end
   end
