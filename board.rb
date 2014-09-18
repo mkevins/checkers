@@ -4,7 +4,7 @@ require_relative 'piece'
 class Board
 
   def inspect
-    self.display
+    "Board"
   end
 
   def initialize
