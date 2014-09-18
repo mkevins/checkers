@@ -23,7 +23,9 @@ class Board
   end
 
   def display
-    @grid.each do |row|
+    puts " 01234567"
+    @grid.each_with_index do |row, i|
+      print "#{i}"
       row.map do |piece|
         if piece.nil?
           print " ".white.on_light_black
