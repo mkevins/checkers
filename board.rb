@@ -3,6 +3,10 @@ require_relative 'piece'
 
 class Board
 
+  def inspect
+    self.display
+  end
+
   def initialize
     @grid = Array.new(8) { Array.new(8) }
     place_pieces
@@ -43,11 +47,11 @@ class Board
       Piece.new(self, [i * 2, 2], :red)
     end
 
-    # white pieces
+    # black pieces
     (0..3).each do |i|
-      Piece.new(self, [i * 2 + 1, 5], :white)
-      Piece.new(self, [i * 2, 6], :white)
-      Piece.new(self, [i * 2 + 1, 7], :white)
+      Piece.new(self, [i * 2 + 1, 5], :black)
+      Piece.new(self, [i * 2, 6], :black)
+      Piece.new(self, [i * 2 + 1, 7], :black)
     end
 
   end
